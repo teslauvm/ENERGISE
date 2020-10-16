@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="index.css" type='text/css'/>
+
+<script type="text/javascript" src="lib/d3.min.js">       </script>
+<script type="text/javascript" src="lib/d3-legend.min.js"></script>
+<script type="text/javascript" src="lib/d3-tip.js">       </script>
+<script type="text/javascript" src="lib/sprintf.min.js">  </script>
+
+<div class="outer_container">
+	<div class="inner_container">
+		<svg id="pf_plot"></svg>
+		<svg id="ts_plot"></svg>
+	</div>
+</div>
+
+<script type="text/javascript" src="functions.js"></script>
+
+<script type="text/javascript">
+	Promise.all([
+		d3.text("dat/vb_full.csv"),
+		d3.text("dat/ib_full.csv")
+	]).then(
+		([_vmag_, _flow_]) => {
+			var vmag = d3.csvParseRows(_vmag_, data => { return data.map(Number); });
+			var flow = d3.csvParseRows(_flow_, data => { return data.map(Number); });
+			pf_plot(vmag[0], flow[0], "dat/nodes_full.csv", "dat/links_full.csv");
+			ts_plot(vmag, flow, "dat/lb.csv", "dat/nodes_full.csv", "dat/links_full.csv");
+		}
+	);
+</script>

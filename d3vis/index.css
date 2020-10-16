@@ -1,0 +1,33 @@
+body {
+	font-family: sans-serif;
+}
+
+.outer_container {
+	/* https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/ */
+	display:         flex;
+	align-items:     center;
+	justify-content: center;
+	margin:          50px auto;
+}
+
+.inner_container {
+	max-width: 70%;
+}
+
+#pf_plot, #ts_plot {
+	display: block;
+}
+
+.node:hover, .point:hover {
+	fill: #fffafa;
+}
+
+.tooltip {
+	background-color: #fffafa;
+	color:            #000000;
+	border:           solid;
+	border-width:     thin;
+	border-radius:    2px;
+	padding:          10px;
+	line-height:      1;
+}

@@ -1,0 +1,101 @@
+/*
+inspired by:
+http://v1.jontangerine.com/log/2007/09/the-incredible-em-and-elastic-layouts-with-css
+http://stackoverflow.com/questions/206652/how-to-create-div-to-fill-all-space-between-header-and-footer-div
+ */
+
+html, body, div, p, h1, h2, ul, ol, li, span, a, input, form {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+html {
+	font-size: 100%;
+	height: 100%;
+	width: 100%;
+}
+body {
+	height: 100%;
+	font-size: 1em;
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Georgia, serif;
+}
+div#wrapper_header {
+	min-height: 27em;
+}
+div#wrapper_content {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	max-width: 63em;
+	margin: 0 auto -3em auto;
+}
+div#wrapper_footer {
+	min-height: 3em;
+	width: 100%;
+	min-width: 63em;
+	background-color: #f2f2f2;
+}
+div#wrapper_dummy {
+	height: 3em;
+}
+div.flushleft, div.flushright {
+	display: inline-block;
+}
+div.flushleft {
+	float: left;
+}
+div.flushright {
+	float: right;
+}
+div.clear {
+	clear: both;
+}
+h1, h2 {
+	font-weight: normal;
+	font-variant: small-caps;
+}
+h1 {
+	font-size: 1.5em;
+	line-height: 1em;
+	margin: 1em;
+}
+h2 {
+	font-size: 1.125em;
+	line-height: 1.3333em;
+	margin: 1.3333em;
+}
+p, ul {
+	font-size: 1em;
+	line-height: 1.5em;
+	margin: 1.5em;
+}
+a {
+	color: #000000;
+	text-decoration: none;
+	border-bottom: 0.0625em dotted;
+}
+a:hover {
+	color: #000000;
+	border-bottom: 0.0625em solid;
+}
+div.wrapper_button {
+	display: inline-block;
+	cursor: pointer;
+}
+span.basic {
+	display: inline-block;
+	vertical-align: middle;
+}
+span.footer {
+	line-height: 3em;
+	padding: 0 0.5em;
+	font-variant: small-caps;
+}
+img {
+	display: inline-block;
+	margin: 1.5em;
+	width: 100%;
+}

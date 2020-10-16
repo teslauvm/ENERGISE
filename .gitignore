@@ -1,0 +1,6 @@
+data/
+docs/
+FOL/
+GML/
+*.log
+.*.log

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="index.css" type='text/css'/>
+
+<script type="text/javascript" src="lib/d3.min.js">     </script>
+<script type="text/javascript" src="lib/d3-tip.js">     </script>
+<script type="text/javascript" src="lib/sprintf.min.js"></script>
+
+<div class="outer_container">
+	<div class="inner_container">
+		<svg id="gr_plot"></svg>
+	</div>
+</div>
+
+<script type="text/javascript" src="functions.js"></script>
+
+<script type="text/javascript">
+	gr_plot("dat/nodes_full.csv", "dat/links_full.csv");
+</script>
